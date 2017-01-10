@@ -1,0 +1,14 @@
+C:\CODE\TestBM\TestBM.Data\bin\Release\TestBM.Data.dll
+C:\CODE\TestBM\TestBM.Data\bin\Release\TestBM.Data.pdb
+C:\CODE\TestBM\TestBM.Data\bin\Release\MongoDB.Bson.dll
+C:\CODE\TestBM\TestBM.Data\bin\Release\MongoDB.Driver.Core.dll
+C:\CODE\TestBM\TestBM.Data\bin\Release\MongoDB.Driver.dll
+C:\CODE\TestBM\TestBM.Data\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\CODE\TestBM\TestBM.Data\bin\Release\TestBM.Model.dll
+C:\CODE\TestBM\TestBM.Data\bin\Release\TestBM.Model.pdb
+C:\CODE\TestBM\TestBM.Data\bin\Release\MongoDB.Bson.xml
+C:\CODE\TestBM\TestBM.Data\bin\Release\MongoDB.Driver.xml
+C:\CODE\TestBM\TestBM.Data\bin\Release\MongoDB.Driver.Core.xml
+C:\CODE\TestBM\TestBM.Data\obj\Release\TestBM.Data.csprojResolveAssemblyReference.cache
+C:\CODE\TestBM\TestBM.Data\obj\Release\TestBM.Data.dll
+C:\CODE\TestBM\TestBM.Data\obj\Release\TestBM.Data.pdb

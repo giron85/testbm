@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "ChartIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ChartIndex</h2>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="../scripts/jquery-1.10.2.min.js"></script>
+    <script src="../scripts/views/datachart.js"></script>
+    <script src="../scripts/views/cost.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="../content/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../content/dist/css/sb-admin-2.css" rel="stylesheet">
+    <!-- Morris Charts CSS -->
+    <link href="../content/vendor/morrisjs/morris.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="../content/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+@*<div class="container-fluid">
+    <div class="col-lg-6" style="margin-top:10px">*@
+        <!--<div class="panel panel-default">-->
+        <!--<div class="panel-heading">Amount (in euros)</div>-->
+        <div class="panel-body">
+            <form class="form-inline" id="costForm" role="form">
+                <div class="form-group">
+                    <div class="input-group">
+                        <!--<div class="input-group-addon">€</div>-->
+                        <input type="number" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                        <!--<div class="input-group-addon">.00</div>-->
+                        <input type="text" class="form-control" id="exampleInputInfo" placeholder="Info">
+
+                        <button type="button" onclick="location.href = 'analyzecost';" class="btn btn-primary">Analyze cost</button>
+                        <button type="submit" style="float:left" class="btn btn-primary">Insert cost</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+
+        <!--</div>-->
+        <div class="container-fluid">
+            <div class="panel-heading">
+                Daily Budget
+            </div>
+            <div id="daily-budget-donut"></div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="panel-heading">
+                Montly Budget
+            </div>
+            <div id="montly-budget-donut"></div>
+        </div>
+
+        <!-- /.panel -->
+    @*</div>
+</div>*@
+

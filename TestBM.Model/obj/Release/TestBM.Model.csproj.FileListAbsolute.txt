@@ -1,0 +1,4 @@
+C:\CODE\TestBM\TestBM.Model\bin\Release\TestBM.Model.dll
+C:\CODE\TestBM\TestBM.Model\bin\Release\TestBM.Model.pdb
+C:\CODE\TestBM\TestBM.Model\obj\Release\TestBM.Model.dll
+C:\CODE\TestBM\TestBM.Model\obj\Release\TestBM.Model.pdb

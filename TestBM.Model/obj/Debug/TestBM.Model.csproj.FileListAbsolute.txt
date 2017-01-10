@@ -1,0 +1,5 @@
+C:\CODE\TestBM\TestBM.Model\bin\Debug\TestBM.Model.dll
+C:\CODE\TestBM\TestBM.Model\bin\Debug\TestBM.Model.pdb
+C:\CODE\TestBM\TestBM.Model\obj\Debug\TestBM.Model.csprojResolveAssemblyReference.cache
+C:\CODE\TestBM\TestBM.Model\obj\Debug\TestBM.Model.dll
+C:\CODE\TestBM\TestBM.Model\obj\Debug\TestBM.Model.pdb
