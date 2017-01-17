@@ -11,10 +11,10 @@
     });
 });
 
-function setData(costAmount, costInfo) {
+function setData(username, costAmount, costInfo) {
     $.ajax(
         {
-            url: 'http://localhost:12177/api/insertcost?username=gio2&costimport=' + costAmount + '&costinfo=' + costInfo,
+            url: 'http://localhost:12177/api/insertcost?username=' + username + '&costimport=' + costAmount + '&costinfo=' + costInfo,
             method: 'POST',
             async: false,
             dataType: 'json'
@@ -31,7 +31,7 @@ function setData(costAmount, costInfo) {
 function getCosts(username) {
     $.ajax(
         {
-            url: 'http://localhost:12177/api/getcost?username=gio2',
+            url: 'http://localhost:12177/api/getcost?username=' + username,
             method: 'GET',
             dataType: 'json'
         }

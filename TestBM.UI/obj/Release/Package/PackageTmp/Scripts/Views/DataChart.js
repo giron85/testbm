@@ -1,13 +1,8 @@
-﻿jQuery(function () {
-    var data = 0;
-    getDailyData();
-    getMontlyData();
-});
-
-function getDailyData() {
+﻿
+function getDailyData(username) {
     $.ajax(
         {
-            url: 'http://localhost:12177/api/dailybudgetremain?username=gio2',
+            url: 'http://localhost:12177/api/dailybudgetremain?username=' + username,
             method: 'GET',
             //data: queryStringData,
             dataType: 'json'
@@ -22,10 +17,10 @@ function getDailyData() {
                  });
 }
 
-function getMontlyData() {
+function getMontlyData(username) {
     $.ajax(
         {
-            url: 'http://localhost:12177/api/montlybudgetremain?username=gio2',
+            url: 'http://localhost:12177/api/montlybudgetremain?username=' + username,
             method: 'GET',
             //data: queryStringData,
             dataType: 'json'

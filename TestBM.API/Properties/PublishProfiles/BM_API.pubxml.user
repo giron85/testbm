@@ -75,6 +75,12 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>01/05/2017 15:32:06</publishTime>
     </File>
+    <File Include="bin/it/Microsoft.AspNet.Identity.Core.resources.dll">
+      <publishTime>04/03/2015 17:09:42</publishTime>
+    </File>
+    <File Include="bin/it/Microsoft.AspNet.Identity.Owin.resources.dll">
+      <publishTime>04/03/2015 17:09:44</publishTime>
+    </File>
     <File Include="bin/it/System.Net.Http.Formatting.resources.dll">
       <publishTime>01/28/2015 04:02:48</publishTime>
     </File>
@@ -108,26 +114,47 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
     <File Include="bin/log4net.dll">
       <publishTime>01/05/2017 15:21:22</publishTime>
     </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>01/05/2017 15:25:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>01/05/2017 15:25:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>01/16/2017 12:24:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>01/05/2017 15:25:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>01/05/2017 15:25:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>01/05/2017 15:25:58</publishTime>
+    </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>01/05/2017 15:23:47</publishTime>
     </File>
     <File Include="bin/MongoDB.Bson.dll">
-      <publishTime>01/05/2017 15:23:09</publishTime>
+      <publishTime>01/10/2017 17:11:21</publishTime>
     </File>
     <File Include="bin/MongoDB.Driver.Core.dll">
-      <publishTime>01/05/2017 15:23:09</publishTime>
+      <publishTime>01/10/2017 17:11:21</publishTime>
     </File>
     <File Include="bin/MongoDB.Driver.dll">
-      <publishTime>01/05/2017 15:23:09</publishTime>
+      <publishTime>01/10/2017 17:11:21</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>01/05/2017 15:20:50</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>01/05/2017 15:24:46</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>01/05/2017 15:20:51</publishTime>
     </File>
     <File Include="bin/System.Runtime.InteropServices.RuntimeInformation.dll">
-      <publishTime>01/05/2017 15:23:09</publishTime>
+      <publishTime>01/10/2017 17:11:21</publishTime>
     </File>
     <File Include="bin/System.Web.Cors.dll">
       <publishTime>01/05/2017 15:20:51</publishTime>
@@ -163,13 +190,13 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>01/05/2017 15:23:47</publishTime>
     </File>
     <File Include="bin/TestBM.API.dll">
-      <publishTime>01/05/2017 16:06:50</publishTime>
+      <publishTime>01/17/2017 15:42:57</publishTime>
     </File>
     <File Include="bin/TestBM.Data.dll">
-      <publishTime>01/05/2017 15:44:23</publishTime>
+      <publishTime>01/17/2017 15:42:55</publishTime>
     </File>
     <File Include="bin/TestBM.Model.dll">
-      <publishTime>01/05/2017 15:44:21</publishTime>
+      <publishTime>01/17/2017 15:15:50</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/05/2017 15:32:07</publishTime>
@@ -247,7 +274,7 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>01/05/2017 15:32:00</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/05/2017 16:06:50</publishTime>
+      <publishTime>01/17/2017 15:42:59</publishTime>
     </File>
   </ItemGroup>
 </Project>

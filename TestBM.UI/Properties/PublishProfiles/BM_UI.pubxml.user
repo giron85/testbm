@@ -79,7 +79,7 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>01/05/2017 15:25:58</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
-      <publishTime>01/05/2017 15:40:39</publishTime>
+      <publishTime>01/16/2017 11:56:09</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
       <publishTime>01/05/2017 15:25:58</publishTime>
@@ -114,11 +114,29 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>01/05/2017 15:23:47</publishTime>
     </File>
+    <File Include="bin/MongoDB.AspNet.Identity.dll">
+      <publishTime>01/16/2017 15:51:39</publishTime>
+    </File>
+    <File Include="bin/MongoDB.Bson.dll">
+      <publishTime>01/10/2017 17:11:21</publishTime>
+    </File>
+    <File Include="bin/MongoDB.Driver.Core.dll">
+      <publishTime>01/10/2017 17:11:21</publishTime>
+    </File>
+    <File Include="bin/MongoDB.Driver.dll">
+      <publishTime>01/10/2017 17:11:21</publishTime>
+    </File>
+    <File Include="bin/MongoDB.Driver.Legacy.dll">
+      <publishTime>01/16/2017 17:33:41</publishTime>
+    </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>01/05/2017 15:20:50</publishTime>
+      <publishTime>01/16/2017 15:44:31</publishTime>
     </File>
     <File Include="bin/Owin.dll">
       <publishTime>01/05/2017 15:24:46</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.InteropServices.RuntimeInformation.dll">
+      <publishTime>01/10/2017 17:11:21</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>01/05/2017 15:23:47</publishTime>
@@ -141,8 +159,14 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
     <File Include="bin/System.Web.WebPages.Razor.dll">
       <publishTime>01/05/2017 15:23:47</publishTime>
     </File>
+    <File Include="bin/TestBM.Data.dll">
+      <publishTime>01/17/2017 15:42:55</publishTime>
+    </File>
+    <File Include="bin/TestBM.Model.dll">
+      <publishTime>01/17/2017 15:15:50</publishTime>
+    </File>
     <File Include="bin/TestBM.UI.dll">
-      <publishTime>01/05/2017 18:35:58</publishTime>
+      <publishTime>01/17/2017 15:43:13</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/05/2017 15:32:07</publishTime>
@@ -592,7 +616,7 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>01/05/2017 15:40:30</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>01/05/2017 15:40:44</publishTime>
+      <publishTime>01/16/2017 17:33:57</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>01/05/2017 15:40:31</publishTime>
@@ -634,10 +658,10 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>01/05/2017 15:40:33</publishTime>
     </File>
     <File Include="Scripts/Views/Cost.js">
-      <publishTime>01/05/2017 15:51:59</publishTime>
+      <publishTime>01/16/2017 18:58:56</publishTime>
     </File>
     <File Include="Scripts/Views/DataChart.js">
-      <publishTime>01/05/2017 15:51:59</publishTime>
+      <publishTime>01/16/2017 18:36:45</publishTime>
     </File>
     <File Include="Scripts/_references.js">
       <publishTime>01/05/2017 15:43:37</publishTime>
@@ -658,7 +682,13 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>01/05/2017 15:40:35</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>01/05/2017 15:40:35</publishTime>
+      <publishTime>01/17/2017 14:23:09</publishTime>
+    </File>
+    <File Include="Views/Account/Manage.cshtml">
+      <publishTime>01/17/2017 12:56:07</publishTime>
+    </File>
+    <File Include="Views/Account/ModifyBudget.cshtml">
+      <publishTime>01/16/2017 18:14:02</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
       <publishTime>01/05/2017 15:40:35</publishTime>
@@ -679,10 +709,10 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>01/05/2017 15:40:35</publishTime>
     </File>
     <File Include="Views/DailyBudget/AnalyzeCost.cshtml">
-      <publishTime>01/05/2017 18:48:12</publishTime>
+      <publishTime>01/16/2017 18:34:51</publishTime>
     </File>
     <File Include="Views/DailyBudget/ChartIndex.cshtml">
-      <publishTime>01/05/2017 18:46:52</publishTime>
+      <publishTime>01/17/2017 15:31:24</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>01/05/2017 15:40:30</publishTime>
@@ -721,7 +751,7 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>01/05/2017 15:59:33</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
-      <publishTime>01/05/2017 15:59:58</publishTime>
+      <publishTime>01/17/2017 12:51:29</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>01/05/2017 15:40:30</publishTime>
@@ -730,7 +760,7 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>01/05/2017 15:40:30</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/05/2017 16:05:48</publishTime>
+      <publishTime>01/17/2017 15:15:56</publishTime>
     </File>
   </ItemGroup>
 </Project>

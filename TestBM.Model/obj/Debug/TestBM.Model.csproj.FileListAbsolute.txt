@@ -3,3 +3,15 @@ C:\CODE\TestBM\TestBM.Model\bin\Debug\TestBM.Model.pdb
 C:\CODE\TestBM\TestBM.Model\obj\Debug\TestBM.Model.csprojResolveAssemblyReference.cache
 C:\CODE\TestBM\TestBM.Model\obj\Debug\TestBM.Model.dll
 C:\CODE\TestBM\TestBM.Model\obj\Debug\TestBM.Model.pdb
+C:\testbm\testbm\TestBM.Model\bin\Debug\TestBM.Model.dll
+C:\testbm\testbm\TestBM.Model\bin\Debug\TestBM.Model.pdb
+C:\testbm\testbm\TestBM.Model\obj\Debug\TestBM.Model.dll
+C:\testbm\testbm\TestBM.Model\obj\Debug\TestBM.Model.pdb
+C:\testbm\testbm\TestBM.Model\bin\Debug\MongoDB.Bson.dll
+C:\testbm\testbm\TestBM.Model\bin\Debug\MongoDB.Driver.Core.dll
+C:\testbm\testbm\TestBM.Model\bin\Debug\MongoDB.Driver.dll
+C:\testbm\testbm\TestBM.Model\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\testbm\testbm\TestBM.Model\bin\Debug\MongoDB.Bson.xml
+C:\testbm\testbm\TestBM.Model\bin\Debug\MongoDB.Driver.xml
+C:\testbm\testbm\TestBM.Model\bin\Debug\MongoDB.Driver.Core.xml
+C:\testbm\testbm\TestBM.Model\obj\Debug\TestBM.Model.csprojResolveAssemblyReference.cache

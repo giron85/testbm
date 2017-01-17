@@ -2,3 +2,14 @@ C:\CODE\TestBM\TestBM.Model\bin\Release\TestBM.Model.dll
 C:\CODE\TestBM\TestBM.Model\bin\Release\TestBM.Model.pdb
 C:\CODE\TestBM\TestBM.Model\obj\Release\TestBM.Model.dll
 C:\CODE\TestBM\TestBM.Model\obj\Release\TestBM.Model.pdb
+C:\testbm\testbm\TestBM.Model\bin\Release\TestBM.Model.dll
+C:\testbm\testbm\TestBM.Model\bin\Release\TestBM.Model.pdb
+C:\testbm\testbm\TestBM.Model\obj\Release\TestBM.Model.dll
+C:\testbm\testbm\TestBM.Model\obj\Release\TestBM.Model.pdb
+C:\testbm\testbm\TestBM.Model\bin\Release\MongoDB.Bson.dll
+C:\testbm\testbm\TestBM.Model\bin\Release\MongoDB.Driver.Core.dll
+C:\testbm\testbm\TestBM.Model\bin\Release\MongoDB.Driver.dll
+C:\testbm\testbm\TestBM.Model\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\testbm\testbm\TestBM.Model\bin\Release\MongoDB.Bson.xml
+C:\testbm\testbm\TestBM.Model\bin\Release\MongoDB.Driver.xml
+C:\testbm\testbm\TestBM.Model\bin\Release\MongoDB.Driver.Core.xml

@@ -1,36 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using System.Web;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Data.Entity;
+//using System.Linq;
+//using System.Security.Claims;
+//using System.Threading.Tasks;
+//using System.Web;
+//using Microsoft.AspNet.Identity;
+//using Microsoft.AspNet.Identity.EntityFramework;
+//using Microsoft.AspNet.Identity.Owin;
+//using Microsoft.Owin;
+//using Microsoft.Owin.Security;
+//using TestBM.UI.Models;
+
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
+using System;
+using System.Security.Claims;
+using System.Threading.Tasks;
 using TestBM.UI.Models;
 
-namespace TestBM.UI
-{
-    public class EmailService : IIdentityMessageService
-    {
-        public Task SendAsync(IdentityMessage message)
-        {
-            // Inserire qui la parte di codice del servizio di posta elettronica per l'invio di un messaggio.
-            return Task.FromResult(0);
-        }
-    }
+//namespace TestBM.UI
+//{
+//    public class EmailService : IIdentityMessageService
+//    {
+//        public Task SendAsync(IdentityMessage message)
+//        {
+//            // Inserire qui la parte di codice del servizio di posta elettronica per l'invio di un messaggio.
+//            return Task.FromResult(0);
+//        }
+//    }
 
-    public class SmsService : IIdentityMessageService
-    {
-        public Task SendAsync(IdentityMessage message)
-        {
-            // Inserire qui la parte di codice del servizio SMS per l'invio di un SMS.
-            return Task.FromResult(0);
-        }
-    }
+//    public class SmsService : IIdentityMessageService
+//    {
+//        public Task SendAsync(IdentityMessage message)
+//        {
+//            // Inserire qui la parte di codice del servizio SMS per l'invio di un SMS.
+//            return Task.FromResult(0);
+//        }
+//    }
 
     // Configurare la gestione utenti dell'applicazione utilizzata in questa applicazione. UserManager viene definito in ASP.NET Identity ed è utilizzato dall'applicazione.
     public class ApplicationUserManager : UserManager<ApplicationUser>
@@ -76,7 +86,7 @@ namespace TestBM.UI
                 Subject = "Codice di sicurezza",
                 BodyFormat = "Il codice di sicurezza è {0}"
             });
-            manager.EmailService = new EmailService();
+            //manager.EmailService = new EmailService();
             //manager.SmsService = new SmsService();
             var dataProtectionProvider = options.DataProtectionProvider;
             if (dataProtectionProvider != null)
@@ -106,4 +116,4 @@ namespace TestBM.UI
             return new ApplicationSignInManager(context.GetUserManager<ApplicationUserManager>(), context.Authentication);
         }
     }
-}
+//}

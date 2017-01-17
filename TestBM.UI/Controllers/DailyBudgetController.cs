@@ -9,14 +9,14 @@ namespace TestBM.UI.Controllers
     public class DailyBudgetController : Controller
     {
         // GET: ChartIndex
-        //[Authorize]
+        [Authorize]
         public ActionResult ChartIndex()
         {
             return View();
         }
 
         // GET: AnalyzeCost
-        //[Authorize]
+        [Authorize]
         public ActionResult AnalyzeCost()
         {
             return View();

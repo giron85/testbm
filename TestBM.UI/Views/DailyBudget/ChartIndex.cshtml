@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ChartIndex</h2>
+<h2>Grafici spese</h2>
 
 <head>
     <meta charset="utf-8">
@@ -13,8 +13,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <script src="../scripts/jquery-1.10.2.min.js"></script>
-    <script src="../scripts/views/datachart.js"></script>
-    <script src="../scripts/views/cost.js"></script>
+    @*<script src="../scripts/views/datachart.js"></script>*@
+    @*<script src="../scripts/views/cost.js"></script>*@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
@@ -36,22 +36,178 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script type="text/javascript">
+    jQuery(function () {
+        var data = 0;
+        getDailyData('@User.Identity.Name');
+        getMontlyData('@User.Identity.Name');
+    });
+
+    function getDailyData(username) {
+        $.ajax(
+            {
+                url: '@System.Configuration.ConfigurationManager.AppSettings["ApiHost"]/api/dailybudgetremain?username=' + username,
+                method: 'GET',
+                //data: queryStringData,
+                dataType: 'json'
+            }
+                     ).done(function (result) {
+                         console.log(result);
+                         renderDailyChartDonut(result);
+                     }).fail(function (req, textStatus, errorThrown) {
+                         console.log(req, textStatus, errorThrown);
+                     }).always(function () {
+                         console.log('Always');
+                     });
+    }
+
+    function getMontlyData(username) {
+        $.ajax(
+            {
+                url: '@System.Configuration.ConfigurationManager.AppSettings["ApiHost"]/api/montlybudgetremain?username=' + username,
+                method: 'GET',
+                //data: queryStringData,
+                dataType: 'json'
+            }
+                     ).done(function (result) {
+                         console.log(result);
+                         renderMontlyChartDonut(result);
+                     }).fail(function (req, textStatus, errorThrown) {
+                         console.log(req, textStatus, errorThrown);
+                     }).always(function () {
+                         console.log('Always');
+                     });
+    }
+
+    function renderDailyChartDonut(data) {
+
+        var consumedDaily = 0;
+        var remainingDaily = 0;
+
+        consumedDaily = Math.round((data.DailyBudget - data.RemainingDailyBudget) * 100) / 100
+        
+        if (data.RemainingDailyBudget > 0) {
+            remainingDaily = Math.round(data.RemainingDailyBudget * 100) / 100
+        }
+
+        if (consumedDaily > data.DailyBudget) $("#dailyBudgetOver").html("Hai consumato più di quello che avresti dovuto (" + Math.round(data.DailyBudget * 100) / 100 + ")!");
+        else $("#dailyBudgetOver").text("");
+
+        Morris.Donut({
+            element: 'daily-budget-donut',
+            data: [{
+                label: "Budget di oggi consumato",
+                value: consumedDaily
+            }, {
+                label: "Budget di oggi rimanente",
+                value: remainingDaily
+            }],
+            colors: ["#d8402f", "#95e866"],
+            resize: true
+        });
+    }
+
+    function renderMontlyChartDonut(data) {
+        var consumedMontly = 0;
+        var remainingMontly = 0;
+
+        consumedMontly = Math.round((data.MontlyBudget - data.MontlyBudgetRemain) * 100) / 100
+
+        if (data.MontlyBudgetRemain > 0) {
+            remainingMontly = Math.round(data.MontlyBudgetRemain * 100) / 100
+        }
+
+        if (consumedMontly > data.MontlyBudget) $("#montlyBudgetOver").html("Hai consumato più di quello che avresti dovuto (" + Math.round(data.MontlyBudget * 100) / 100 + ")!");
+        else $("#montlyBudgetOver").text("");
+
+        Morris.Donut({
+            element: 'montly-budget-donut',
+            data: [{
+                label: "Budget mensile consumato",
+                value: consumedMontly
+            }, {
+                label: "Budget mensile rimanente",
+                value: remainingMontly
+            }],
+            colors: ["#d8402f", "#95e866"],
+            resize: true
+        });
+    }
+
+    $(document).ready(function () {
+
+        $(function () {
+            //$('#costForm').validator();
+            $('#costForm').on('submit', function (e) {
+                var costAmount = $("#exampleInputAmount").val();
+                var costInfo = $("#exampleInputInfo").val();
+                setData('@User.Identity.Name', costAmount, costInfo);
+            });
+
+        });
+    });
+
+    function setData(username, costAmount, costInfo) {
+        $.ajax(
+            {
+                url: '@System.Configuration.ConfigurationManager.AppSettings["ApiHost"]/api/insertcost?username=' + username + '&costimport=' + costAmount + '&costinfo=' + costInfo,
+                method: 'POST',
+                async: false,
+                dataType: 'json'
+            }
+                     ).done(function (result) {
+                         console.log(result);
+                     }).fail(function (req, textStatus, errorThrown) {
+                         console.log(req, textStatus, errorThrown);
+                     }).always(function () {
+                         console.log('Always');
+                     });
+    }
+
+    function getCosts(username) {
+        $.ajax(
+            {
+                url: '@System.Configuration.ConfigurationManager.AppSettings["ApiHost"]/api/getcost?username=' + username,
+                method: 'GET',
+                dataType: 'json'
+            }
+                     ).done(function (result) {
+                         console.log(result);
+                         renderChartLine(result);
+                     }).fail(function (req, textStatus, errorThrown) {
+                         console.log(req, textStatus, errorThrown);
+                     }).always(function () {
+                         console.log('Always');
+                     });
+    }
+
+    function renderChartLine(data) {
+        for (var i = 0, len = data.length; i < len; i++) {
+            $('#tablebody').append('<tr><th scope="row">' + (i + 1) + '</th><td>' + data[i].CostInfo + '</td><td>' + data[i].CostDetail + '</td></tr>');
+        }
+        $("#costList").trigger("create");
+    }
+
+</script>
+
+
+
 </head>
 @*<div class="container-fluid">
     <div class="col-lg-6" style="margin-top:10px">*@
         <!--<div class="panel panel-default">-->
         <!--<div class="panel-heading">Amount (in euros)</div>-->
-        <div class="panel-body">
+        <div class="panel-body" style="padding:0px">
             <form class="form-inline" id="costForm" role="form">
                 <div class="form-group">
                     <div class="input-group">
                         <!--<div class="input-group-addon">€</div>-->
-                        <input type="number" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                        <input type="number" class="form-control" style="margin: 5px" id="exampleInputAmount" placeholder="Spesa">
                         <!--<div class="input-group-addon">.00</div>-->
-                        <input type="text" class="form-control" id="exampleInputInfo" placeholder="Info">
-
-                        <button type="button" onclick="location.href = 'analyzecost';" class="btn btn-primary">Analyze cost</button>
-                        <button type="submit" style="float:left" class="btn btn-primary">Insert cost</button>
+                        <input type="text" class="form-control" style="margin: 5px" id="exampleInputInfo" placeholder="Descrizione spesa">
+                                                
+                        <button type="submit" style="float:left; margin: 5px" class="btn btn-default">Inserisci spesa</button>
                     </div>
                 </div>
             </form>
@@ -60,17 +216,13 @@
 
 
         <!--</div>-->
-        <div class="container-fluid">
-            <div class="panel-heading">
-                Daily Budget
-            </div>
-            <div id="daily-budget-donut"></div>
+        <div class="container-fluid" style="margin-top:-40px">            
+            <label id="dailyBudgetOver" style="color:red"></label>
+            <div id="daily-budget-donut"></div>            
         </div>
 
-        <div class="container-fluid">
-            <div class="panel-heading">
-                Montly Budget
-            </div>
+        <div class="container-fluid" style="margin-top:-40px">
+            <label id="montlyBudgetOver" style="color:red"></label>
             <div id="montly-budget-donut"></div>
         </div>
 

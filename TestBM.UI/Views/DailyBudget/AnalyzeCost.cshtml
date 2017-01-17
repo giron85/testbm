@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>AnalyzeCost</h2>
+<h2>Analizza spese</h2>
 
 <head>
     <meta charset="utf-8">
@@ -36,6 +36,33 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script type="text/javascript">
+        function getCosts(username) {
+            $.ajax(
+                {
+                    url: '@System.Configuration.ConfigurationManager.AppSettings["ApiHost"]/api/getcost?username=' + username,
+                    method: 'GET',
+                    dataType: 'json'
+                }
+                         ).done(function (result) {
+                             console.log(result);
+                             renderChartLine(result);
+                         }).fail(function (req, textStatus, errorThrown) {
+                             console.log(req, textStatus, errorThrown);
+                         }).always(function () {
+                             console.log('Always');
+                         });
+        }
+
+        function renderChartLine(data) {
+            for (var i = 0, len = data.length; i < len; i++) {
+                $('#tablebody').append('<tr><th scope="row">' + (i + 1) + '</th><td>' + data[i].CostInfo + '</td><td>' + data[i].CostDetail + '</td></tr>');
+            }
+            $("#costList").trigger("create");
+        }
+    </script>
+
 </head>
 @*<div class="container-fluid">
     <div class="col-lg-6" style="margin-top:10px">*@
@@ -44,17 +71,17 @@
 
 
             <div class="panel-heading">
-                Today Cost List
+                Lista spese
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
-                <script>getCosts('');</script>
+                <script>getCosts('@User.Identity.Name');</script>
                 <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Cost info</th>
-                            <th>Cost amount</th>
+                            <th>Descrizione spesa</th>
+                            <th>Spesa</th>
                         </tr>
                     </thead>
                     <tbody id="tablebody"></tbody>
